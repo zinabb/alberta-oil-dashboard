@@ -1,0 +1,96 @@
+<!-- HTML Language use for \apps\templates\includes\navigation.html* -->
+
+<nav class="navbar navbar-top navbar-expand navbar-dashboard navbar-dark ps-0 pe-2 pb-0">
+    <div class="container-fluid">
+
+        <!-- Row for Search, Title, and Profile/Notifications -->
+        <div class="row w-100 align-items-center">
+
+            <!-- LEFT COLUMN: Search Bar -->
+            <div class="col-3 d-flex align-items-center">
+                <!-- Search form -->
+                <form class="navbar-search form-inline" style="width: 200px;">
+                    <div class="input-group">
+                        <span class="input-group-text" id="topbar-addon">
+                            <!-- Your SVG icon -->
+                            <svg class="icon icon-xs" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M8 4a4 4 0 100 8 4 4 0 000-8z
+                 M2 8a6 6 0 1110.89 3.476l4.817 4.817
+                 a1 1 0 01-1.414 1.414l-4.816-4.816
+                 A6 6 0 012 8z"
+                                      clip-rule="evenodd">
+                                </path>
+                            </svg>
+                        </span>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Search"
+                               aria-label="Search"
+                               aria-describedby="topbar-addon"
+                               style="font-size: 1rem; font-weight: 600; color: #001B44;">
+                    </div>
+                </form>
+            </div>
+
+            <!-- MIDDLE COLUMN: Centered Title -->
+            <div class="col-6 text-center">
+                <span style="font-size: 1.3rem; font-weight: 700; color: #001B44;">
+                    Alberta Crude Oil Dashboard
+                </span>
+            </div>
+
+            <!-- RIGHT COLUMN: Notification + Profile -->
+            <div class="col-3">
+                <ul class="navbar-nav align-items-center justify-content-end d-flex flex-row">
+
+                    <!-- Notification bell:
+    <li class="nav-item dropdown me-3">
+        <a class="nav-link text-dark notification-bell unread dropdown-toggle"
+           data-unread-notifications="true"
+           href="#"
+           role="button"
+           data-bs-toggle="dropdown"
+           data-bs-display="static"
+           aria-expanded="false">
+            <svg class="icon icon-sm text-gray-900" fill="currentColor"
+                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707
+         A1 1 0 004 14h12a1 1 0
+         00.707-1.707L16 11.586V8
+         a6 6 0 00-6-6zM10 18a3 3
+         0 01-3-3h6a3 3 0 01-3 3z">
+                </path>
+            </svg>
+        </a>
+        <!-- Notification dropdown content -->
+                    </li>
+
+
+                    <!-- Profile -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="media d-flex align-items-center">
+                                <img class="avatar rounded-circle"
+                                     alt="Zinab Bin Sumait"
+                                     src="/static/assets/img/team/Zinab.jpg"
+                                     style="width:50px; height:50px; object-fit: cover;">
+                                <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
+                                    <!-- Name: NOT bold -->
+                                    <span class="mb-0" style="font-size: 1.1rem; font-weight: 400; color: #001B44;">
+                                        Zinab Bin Sumait
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Profile dropdown content -->
+                    </li>
+                </ul>
+            </div>
+
+        </div> <!-- /row -->
+
+        </div> <!-- /container-fluid -->
+</nav>
+

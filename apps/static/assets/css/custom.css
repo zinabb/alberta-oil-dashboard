@@ -1,0 +1,48 @@
+/* custom.css */
+
+/* Make the entire body use Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Example: a custom class for your dashboard title */
+.dashboard-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600; /* or 'bold' */
+    color: black;
+}
+
+/* Style for your portfolio and LinkedIn links */
+a.small-link {
+    font-size: 0.9rem !important; /* Smaller text */
+    color: #007bff !important; /* Standard clickable blue */
+    text-decoration: underline !important;
+}
+
+/* Center the footer text */
+.footer-custom {
+    text-align: center;
+    color: #6c757d; /* This is a grey color (Bootstrap's text-muted is #6c757d) */
+    font-size: 0.9rem;
+    margin: 0 auto;
+}
+
+/* Make the search bar smaller */
+.custom-searchbar {
+    width: 200px; /* Adjust as needed, e.g., 250px or 300px */
+}
+
+    /* Style the input text: bigger, bold, navy */
+    .custom-searchbar .form-control {
+        font-size: 1rem; /* Increase size */
+        font-weight: bold; /* Bold text */
+        color: navy; /* Navy text color */
+    }
+
+/* Make your name bigger (without affecting other text) */
+.big-name {
+    font-size: 1.2rem; /* Increase the name size */
+}
+
+

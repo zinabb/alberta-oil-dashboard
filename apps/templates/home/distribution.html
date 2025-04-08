@@ -1,0 +1,33 @@
+<!-- This i s\apps\templates\home\distribution.html* -->
+{% extends "layouts/base.html" %}
+
+{% block title %}Distribution of Production Values{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <h3 class="mb-4">Distribution of Production Values</h3>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <!-- Embed Graph 2 -->
+            <iframe src="{{ url_for('home_blueprint.graph2') }}"
+                    style="width:100%; height:500px; border:none;"></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Commentary Section -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Key Insights</h5>
+                <p class="card-text">
+                    The distribution of production values displays a <em>multimodal pattern</em>, suggesting distinct phases in Alberta’s oil output over time. Noticeable peaks around <strong>8.5M</strong>, <strong>15M</strong>, and <strong>18M barrels/month</strong> reflect varying production intensities, likely influenced by shifts in extraction strategies, market demand, or regulatory changes. The clustering of values in the higher production range signals a transition toward <em>greater operational efficiency</em> and possibly an <em>increased reliance on non-conventional methods</em> in recent years.
+                </p>
+            </div>
+        </div>
+    </div> 
+</div>
+
+{% endblock content %}
+

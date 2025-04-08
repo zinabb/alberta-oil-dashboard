@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Albertas Crude Oil Production - {% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Existing vendor styles -->
+    <link type="text/css" href="/static/assets/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+    <link type="text/css" href="/static/assets/vendor/notyf/notyf.min.css" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static', filename='assets/css/volt.css') }}" rel="stylesheet">
+
+    <!-- Your custom CSS file (after volt.css) -->
+    <link type="text/css" href="{{ url_for('static', filename='assets/css/custom.css') }}" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Plotly (global) -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <!-- Optional: Page-specific CSS -->
+    {% block stylesheets %}{% endblock stylesheets %}
+</head>
+<body>
+    {% include 'includes/sidebar.html' %}
+    <main class="content">
+        {% include 'includes/navigation.html' %}
+        {% block content %}{% endblock content %}
+        {% include 'includes/footer.html' %}
+    </main>
+    {% include 'includes/scripts.html' %}
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}{% endblock javascripts %}
+</body>
+</html>
+
+

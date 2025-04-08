@@ -1,0 +1,62 @@
+<!-- This is \apps\templates\home\forecasting.html* -->
+
+{% extends "layouts/base.html" %}
+
+{% block title %}Forecasting Models{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <h3 class="mb-4">Forecasting Models</h3>
+
+    <!-- Simple Linear Regression Forecast -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-header">
+            <h5 class="card-title">Simple Linear Regression Forecast</h5>
+        </div>
+        <div class="card-body">
+            <iframe src="{{ url_for('home_blueprint.graph4') }}"
+                    style="width:100%; height:500px; border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- ARIMA Forecast -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-header">
+            <h5 class="card-title">ARIMA Forecast</h5>
+        </div>
+        <div class="card-body">
+            <iframe src="{{ url_for('home_blueprint.graph5') }}"
+                    style="width:100%; height:500px; border:none;"></iframe>
+        </div>
+    </div>
+
+    <!-- Key Insights Section -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Key Insights</h5>
+                    <p class="card-text">
+
+                        <strong>Simple Linear Regression Forecast:</strong>
+                        This model presents a steady <strong>upward projection</strong> of Alberta's oil production, consistent with the long-term expansion observed since the early 2000s. It assumes a stable rate of growth without accounting for market volatility or policy changes—making it suitable for <em>long-term trend analysis</em>, but less reliable for capturing short-term disruptions or economic shifts.
+
+                        <br><br>
+
+                        <strong>ARIMA Forecast:</strong>
+                        In contrast, the ARIMA model introduces a more <strong>statistically rigorous</strong> outlook by incorporating time-based patterns and seasonality. It forecasts a relatively flat output with a <em>widening confidence interval</em> into 2026, highlighting uncertainty due to recent market fluctuations or data limitations. This model is better equipped to detect production cycles, inflection points, or abrupt shifts in trend, making it valuable for <em>short- to medium-term planning</em>.
+
+                        <br><br>
+
+                        <strong>Strategic Takeaway:</strong>
+                        The contrasting forecasts demonstrate Alberta’s production resilience while emphasizing the importance of selecting forecasting tools that balance <em>trend clarity</em> with <em>statistical sensitivity</em>. Integrating both methods can enhance foresight in navigating demand shocks, regulatory interventions, or infrastructure constraints.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock content %}
+

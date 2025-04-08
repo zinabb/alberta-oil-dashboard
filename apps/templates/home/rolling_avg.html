@@ -1,0 +1,19 @@
+<!-- This is \apps\templates\home\rolling_avg.html* -->
+
+{% extends "layouts/base.html" %}
+
+{% block title %}Rolling Average Production{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <h3 class="mb-4">Rolling Average Production</h3>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <!-- Embed Graph 3 -->
+            <iframe src="{{ url_for('home_blueprint.graph3') }}"
+                    style="width:100%; height:500px; border:none;"></iframe>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+

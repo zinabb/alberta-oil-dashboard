@@ -1,0 +1,21 @@
+{% extends "layouts/graph_base.html" %}
+
+{% block title %}Graph{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Render the Plotly graph div -->
+            {{ graph_div | safe }}
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block javascripts %}
+<!-- You can add extra page-specific JS here if needed -->
+{% endblock javascripts %}
+
+
+

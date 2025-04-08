@@ -1,0 +1,142 @@
+<!-- This is apps\templates\home\production_overview.html* -->
+
+{% extends "layouts/base.html" %}
+
+{% block title %}Production Overview{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+
+    <!-- KPI Cards Row -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Production</h5>
+                    <p class="card-text">{{ kpi_data.total_production }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Year-over-Year Change</h5>
+                    <p class="card-text">{{ kpi_data.yoy_change }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Monthly Growth</h5>
+                    <p class="card-text">{{ kpi_data.monthly_growth }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Cumulative Production</h5>
+                    <p class="card-text">{{ kpi_data.cumulative }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trend Chart Section -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h5 class="card-title">Production Trend (Last 12 Months)</h5>
+                </div>
+                <div class="card-body">
+                    {{ mini_chart_div|safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Oil Type Production Table Section  -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h5 class="card-title">Oil Type Production Breakdown</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Production</th>
+                                <th>Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Conventional Oil</td>
+                                <td>{{ oil_breakdown['Conventional Oil']['production'] }}</td>
+                                <td>{{ oil_breakdown["Conventional Oil"]["change"] | safe }}</td>
+                            </tr>
+                            <tr>
+                                <td>Non-Conventional Oil</td>
+                                <td>{{ oil_breakdown['Non-Conventional Oil']['production'] }}</td>
+                                <td>{{ oil_breakdown['Non-Conventional Oil']['change'] | safe }}</td>
+                            </tr>
+                            <tr>
+                                <td>Total Oil</td>
+                                <td>{{ oil_breakdown['Total oil production']['production'] }}</td>
+                                <td>{{ oil_breakdown['Total oil production']['change'] | safe }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Commentary Section -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Key Insights</h5>
+                    <p class="card-text">
+                        The Alberta Crude Oil Dashboard highlights a recent contraction in oil production, with average daily output currently at
+                        <strong>638,563 barrels/day</strong>. Despite this, the province’s cumulative production has surpassed
+                        <strong>3 billion barrels</strong>, reinforcing Alberta’s central role in global energy supply.
+                        <br><br>
+                        However, production trends over the past 12 months signal increased volatility and downward pressure.
+                        <strong>Monthly growth has fallen sharply by <span style="color: red;">-13.44%</span></strong>, while the
+                        <strong>year-over-year production</strong> has dropped <strong><span style="color: red;">-1.94%</span></strong>, reflecting industry-wide slowdowns.
+                        <br><br>
+                        <strong>May 2024</strong> marked a production trough, followed by a sharp rebound in
+                        <strong>October 2024</strong>, before declining again in early <strong>2025</strong> — indicating market instability likely tied to
+                        regulatory shifts, environmental constraints, or capital reallocation.
+                        <br><br>
+                        <strong>Oil Type Breakdown:</strong><br>
+                        - <strong>Non-Conventional Oil</strong> (dominant share): ↓ <strong><span style="color: red;">14.02%</span></strong>, suggesting possible bottlenecks in oil sands operations or delayed investments.<br>
+                        - <strong>Conventional Oil</strong>: ↓ <strong><span style="color: red;">10.17%</span></strong>, potentially reflecting legacy infrastructure limitations or declining well productivity.
+                        <br><br>
+                        <strong>Strategic Takeaway:</strong><br>
+                        These trends underscore Alberta’s exposure to global demand shifts and operational constraints.
+                        As volatility rises, <em>adaptive infrastructure, investment diversification, and policy support</em>
+                        will be key in sustaining Alberta’s energy leadership while navigating the global energy transition.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Source & Last Updated -->
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <p class="text-muted">
+                Data last updated: {{ last_updated }} | Source: {{ source }}
+            </p>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}
