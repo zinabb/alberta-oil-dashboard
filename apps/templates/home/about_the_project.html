@@ -1,39 +1,90 @@
-<!-- This is \apps\templates\home\about_the_project.html* -->
 {% extends "layouts/base.html" %}
 
 {% block title %}About the Project{% endblock title %}
 
 {% block content %}
 
-<!-- About the Project Section -->
-<div class="row mt-4">
-    <div class="col-12">
-        <div class="card shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">About the Project</h5>
-                <p class="card-text">
-                    This dashboard was developed as a data visualization and forecasting tool to analyze Alberta’s crude oil production trends. Built using <strong>Microsoft Visual Studio</strong>, the project utilizes <strong>Python</strong> as its primary language, complemented by <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Bootstrap</strong>, <strong>Git</strong>and <strong>Plotly</strong> for visualizations. The early development phase also included experimentation with <strong>MATLAB</strong>, later transitioning to a fully web-based framework.
-                </p>
-                <p class="card-text">
-                    Real-time data is sourced from the <strong>Government of Alberta’s public API</strong>, ensuring up-to-date and reliable insights. The project involved extracting raw production data directly from these APIs, followed by extensive data wrangling and time-series calculations to generate meaningful performance metrics and trend visualizations. Custom logic was implemented to compute key indicators such as <em>year-over-year changes</em>, <em>monthly growth rates</em>, <em>cumulative production</em>, <em>forecasting models</em>, and <em>correlation matrices</em>, all dynamically rendered through interactive Plotly charts.
-                </p>
-                <p class="card-text">
-                    The layout follows a clean, modular design aligned with modern data storytelling principles, emphasizing usability, clarity, and policy relevance.
-                </p>
-                <hr>
-                <h6 class="card-title text-center">About Me</h6>
-                <div class="text-center mb-3">
-                    <img src="/static/assets/img/team/Zinab.jpg" alt="Zinab Bin Sumait" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">                
+<!-- About Section (Improved Two-Column Layout) -->
+<div class="container mt-5">
+    <div class="row g-4">
+        <!-- About the Project -->
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h4 class="card-title fw-bold">About the Project</h4>
+                    <p class="card-text">
+                        This dashboard was developed as a data visualization and forecasting tool to analyze Alberta’s crude oil production trends. Built using <strong>Microsoft Visual Studio</strong>, the project utilizes <strong>Python</strong> as its primary language, complemented by <strong>HTML</strong>, <strong>CSS</strong>, <strong>SCSS</strong>, <strong>JavaScript</strong>, <strong>Bootstrap</strong> and <strong>Plotly</strong> for visualizations. Early development also included experimentation with <strong>MATLAB</strong>, later transitioning to a fully interactive web-based framework.
+                    </p>
+                    <p class="card-text">
+                        Real-time data is sourced from the <strong>Government of Alberta’s public API</strong>, ensuring up-to-date and reliable insights. The dashboard features production KPIs, correlation matrices, forecasting models (like <em>Simple Linear Regression</em> and <em>ARIMA</em>), and industry-specific visuals like the <em>Exponential Decline Curve</em>.
+                    </p>
+                    <p class="card-text">
+                        The layout follows a clean, modular design aligned with modern data storytelling principles, emphasizing usability, clarity, and policy relevance.
+                    </p>
+
+                    <!-- MINI TIMELINE INSIDE CARD -->
+                    <hr class="my-4">
+
+                    <div class="bg-light p-3 rounded">
+                        <h6 class="fw-bold text-center mb-3 text-primary">Project Timeline</h6>
+                        <ul class="list-unstyled small">
+                            <li class="mb-3">
+                                <span class="badge text-white me-2 mt-1" style="background-color: #b39ddb;">June 2024</span>
+                                <span class="text-muted">Graduated with a</span> <strong>B.Comm in International Business Strategy</strong>.
+                            </li>
+                            <li class="mb-3">
+                                <span class="badge bg-warning text-dark me-2">Sep–Dec 2024</span>
+                                Completed an <em>Oil & Gas course</em> at Mount Royal University.
+                            </li>
+                            <li class="mb-3">
+                                <span class="badge bg-success me-2">Jan 2025</span>
+                                Began <strong>self-teaching programming</strong> fundamentals.
+                            </li>
+                            <li class="mb-3">
+                                <span class="badge bg-info text-dark me-2">Feb 2025</span>
+                                Built first <strong>MATLAB graphs</strong> using Alberta’s API.
+                            </li>
+                            <li class="mb-3">
+                                <span class="badge text-white me-2 mt-1" style="background-color: #f48fb1;">Mar 2025</span>
+                                Switched to <strong>Plotly</strong> & began web development.
+                            </li>
+                            <li>
+                                <span class="badge bg-danger me-2">Apr 2025</span>
+                                Finalized project using <strong>HTML, CSS, JS, Python, Bootstrap</strong>.
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
-                <p class="card-text">
-                    My name is <strong>Zinab Bin Sumait</strong>, and this project marks the beginning of my journey into software development and data analytics. I began learning to program in <strong>January 2025</strong>, shortly after completing the <em>Introduction to the Oil and Gas Industry</em> course at <strong>Mount Royal University</strong> in <strong>December 2024</strong>. That course not only introduced me to Alberta’s energy sector but also ignited a desire to explore its complexities through data.
-                </p>
-                <p class="card-text">
-                    I earned my <strong>Bachelor of Commerce in International Business Strategy</strong> from the <strong>University of Calgary</strong> in <strong>June 2024</strong>. With no prior coding background, this dashboard represents my first independent development project—blending business acumen with technical execution. Through hands-on learning and self-directed study, I transformed real-time oil production data into accessible, policy-relevant insights.
-                </p>
-                <p class="card-text">
-                    This is more than a coding exercise; it is a reflection of how strategic thinking and data science can intersect to create meaningful impact. As I continue to grow in the fields of energy, economics, and technology, my goal is to contribute to a more informed and data-literate approach to decision-making in Alberta’s resource landscape.
-                </p>
+            </div>
+        </div>
+
+
+        <!-- About Me -->
+        <div class="col-md-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-body text-center">
+                    <img src="/static/assets/img/team/Zinab.jpg"
+                         alt="Zinab Bin Sumait"
+                         class="img-fluid rounded-circle shadow-sm mb-3"
+                         style="width: 130px; height: 130px; object-fit: cover;">
+                    <h4 class="fw-semibold mb-1">Zinab Bin Sumait</h4>
+                    <p class="text-muted small">Aspiring Energy Analyst | Data Storyteller</p>
+                    <hr>
+                    <p class="card-text text-start">
+                        This dashboard represents both a personal milestone and a professional foundation. I embarked on my programming journey in <strong>January 2025</strong>, driven by a desire to translate economic knowledge into actionable insight. This followed the completion of the <em>Introduction to the Oil and Gas Industry</em> course at <strong>Mount Royal University</strong> in <strong>December 2024</strong>, which illuminated Alberta’s role in the global energy landscape and sparked my passion for energy analytics.
+                    </p>
+                    <p class="card-text text-start">
+                        I hold a <strong>Bachelor of Commerce in International Business Strategy</strong> from the <strong>University of Calgary</strong> (<strong>June 2024</strong>). With this academic foundation, I began independently learning to code and built this dashboard as my first technical project—a culmination of self-guided data science exploration and strategic thinking.
+                    </p>
+                    <p class="card-text text-start">
+                        This work is more than a coding exercise—it is a synthesis of industry context, real-time data, modern visualization, and a <strong>deep passion for the energy industry</strong>. My goal is to bridge the divide between commercial strategy and data-driven decision making in Alberta’s resource sector—and continue growing at the intersection of <em>economics, energy, and technology</em>.
+                    </p>
+                    <a href="/static/assets/pdf/Zinab_Resume.pdf" target="_blank" class="btn btn-outline-primary mt-3">
+                        View My Resume
+                    </a>
+
+                </div>
             </div>
         </div>
     </div>

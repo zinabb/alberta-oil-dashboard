@@ -104,7 +104,7 @@ def graph1():
                         'x':0.5,
                         'xanchor': 'center'},
                    xaxis_title="Date (year)",
-                   yaxis_title="Production (barrels/day)",
+                   yaxis_title="m³",
                    font=dict(size=14),
                    template="plotly_white")
     ##fig.show()
@@ -120,7 +120,7 @@ def graph2():
         x="Value", 
         nbins=30, 
         title="Distribution of Production Values",
-        labels={"Production": "Production (barrels/day)"}
+        labels={"Production": "m³"}
     )
 
     fig.update_traces(marker=dict(line=dict(width=1, color="navy")))
@@ -170,7 +170,7 @@ def graph4():
                           mode='lines', name='Forecast', line=dict(color='magenta', dash='dash')))
     fig4.update_layout(title="Simple Linear Regression Forecast",
                    xaxis_title="Date",
-                   yaxis_title="Production",
+                   yaxis_title="m³",
                    font=dict(size=14),
                    template="plotly_white")
 
@@ -220,7 +220,7 @@ def graph5():
                           showlegend=True, name='Confidence Interval', opacity=0.3))
     fig5.update_layout(title="Crude Oil Production Forecast (ARIMA) into 2026",
                    xaxis_title="Date",
-                   yaxis_title="Production (Barrels)",
+                   yaxis_title="m³",
                    font=dict(size=14),
                    template="plotly_white")
     graph_div = pyo.plot(fig5, output_type="div", include_plotlyjs=True)
@@ -237,7 +237,7 @@ def graph6():
         x=time_vals, 
         y=production, 
         title="Exponential Decline Curve",
-        labels={"x": "Time (Months)", "y": "Production (Barrels)"}
+        labels={"x": "Time (Months)", "y": "m³"}
     )
     graph_div = pyo.plot(fig, output_type="div", include_plotlyjs=True)
     return render_template("home/graph_template.html", graph_div=graph_div)
@@ -337,10 +337,10 @@ def production_overview():
 
     # Format for frontend
     kpi_data = {
-        'total_production': f"{round(total_production_per_day):,} barrels/day",
+        'total_production': f"{round(total_production_per_day):,} m³",
         'yoy_change': f"{round(yoy_change, 2)}%" if yoy_change is not None else "Data not available",
         'monthly_growth': f"{round(monthly_growth, 2)}%",
-        'cumulative': f"{round(cumulative_production / 1_000_000, 2)} million barrels"
+        'cumulative': f"{round(cumulative_production / 1_000_000, 2)} million m³"
     }
 
     type_df = fetch_oil_type_breakdown()
@@ -376,7 +376,7 @@ def production_overview():
         prev_val = get_value(prev_df, oil_type)
 
         oil_breakdown[oil_type] = {
-            'production': f"{int(curr_val):,} b/d",
+            'production': f"{int(curr_val):,} m³",
             'change': format_arrow(f"{pct_change(curr_val, prev_val)} %")
         }
 
@@ -385,7 +385,7 @@ def production_overview():
     source = "Government of Alberta Economic Data"
     last_year = df[df['Date'] > (df['Date'].max() - pd.DateOffset(months=12))]
     fig = px.line(last_year, x="Date", y="Value", title="Production Trend (Last 12 Months)",
-                  labels={"Production": "Production (b/d)"})
+                  labels={"Production": "Production (m³)"})
     mini_chart_div = pyo.plot(fig, output_type="div", include_plotlyjs=True)
 
     return render_template("home/production_overview.html",
@@ -427,9 +427,3 @@ def home_redirect():
 def test_fetch():
     df = fetch_oil_data()
     return "Columns in df: " + str(df.columns)
-
-
-
-
-
-
