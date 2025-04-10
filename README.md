@@ -1,8 +1,10 @@
-# Alberta Crude Oil Production
+# 🛢️ Alberta Oil Production Dashboard
+
+🖥️ [Click here to explore the Alberta Oil Dashboard](https://alberta-oil-dashboard.onrender.com)
 
 <img src="media/demo.gif" width="700"/>
 
-<br />
+---
 
 ## Table of Contents
 
@@ -13,83 +15,87 @@
 * [Forecasting](#forecasting)
 * [Data Insights](#data-insights)
 * [About](#about)
+* [Social Media](#social-media)
 
-<br />
+---
 
 ## Production Overview
 
-> The Production Overview section summarizes Alberta’s crude oil performance over the past year. It highlights key metrics like:
->
-> - **Total Production** (monthly output)
-> - **Year-over-Year Change**
-> - **Monthly Growth**
-> - **Cumulative Production**
->
-> A line graph shows monthly trends, revealing fluctuations in output—such as the production drop in early 2024 and subsequent recovery. This real-time data is fetched via API and calculated dynamically to give decision-makers a clear snapshot of the province's production status.
+This section summarizes Alberta’s **crude oil production performance** over the past year. It highlights:
 
-<br />
+- **Total Production** (monthly output)
+- **Year-over-Year Change**
+- **Monthly Growth**
+- **Cumulative Production**
+
+A line graph illustrates monthly production trends, including key fluctuations like the early 2024 dip and recent recovery. Real-time data is pulled via Alberta’s open API and dynamically calculated to give users a live, accurate snapshot of the province's production status.
+
+---
 
 ## Historical Trends
 
-> This section visualizes Alberta’s oil production from 2006 to 2025. The interactive line chart highlights:
->
-> - A steady upward trend in oil production over the past two decades
-> - A **peak decline** around 2016–2017
-> - Resilient recovery post-2020 and continuing upward momentum
->
-> Users can zoom and pan through the timeline, making it easy to explore how external events (e.g., oil price crashes, policy changes) influenced Alberta’s production levels.
+This section visualizes oil production in Alberta from 2006 to 2025 using an interactive line chart. Key insights include:
 
-<br />
+- A steady long-term upward trend
+- Production declines around 2016–2017
+- Post-2020 recovery and growth
+
+Users can zoom, hover, and pan through this timeline to explore how events such as price crashes and policy shifts impacted Alberta’s production trajectory.
+
+---
 
 ## Distribution
 
-> This part of the dashboard explores the **distribution of monthly production volumes**, offering insight into how oil output varies over time.
->
-> The histogram reveals a **multimodal distribution**, with notable clustering. These peaks likely reflect differing production intensities tied to market demand, regulatory changes, or extraction strategy. The shift toward higher production clusters may indicate improvements in operational efficiency or reliance on non-conventional methods.
+Explore the **distribution of monthly crude oil output** using a histogram that reveals:
 
-<br />
+- A multimodal distribution pattern
+- Clusters likely linked to market demand, regulations, or extraction methods
+- A shift toward higher-volume clusters over time
+
+This visualization may reflect Alberta’s growing reliance on bitumen and synthetic production alongside conventional sources.
+
+---
 
 ## Rolling Avg Analysis
 
-> This section presents a 12-month **Rolling Average Line** overlaid on top of the actual monthly production data.
+This section applies a **12-month rolling average** to monthly production data to:
 
-The rolling average smooths short-term fluctuations and highlights broader trends over time. This makes it easier to observe:
-- Long-term production growth
-- Periods of volatility or decline
-- Structural changes in Alberta’s oil output
+- Smooth short-term noise
+- Clarify underlying trends
+- Highlight periods of volatility or steady growth
 
-The red line represents the **12-month rolling mean**, offering a clearer picture of underlying trends compared to the more jagged raw data in blue. This type of analysis is commonly used in energy analytics to reduce noise and improve the readability of time-series performance.
+The red line represents the rolling mean, revealing long-term structural patterns that are often missed in raw time-series data.
 
-<br />
+---
 
-## Forecasting 
+## Forecasting
 
-> This section includes two forecasting models to project Alberta's crude oil production trends into 2026:
+Two models are used to predict Alberta’s future crude oil production into 2026:
 
 - **Simple Linear Regression**  
-  A straightforward trendline that projects future production based on historical growth. While effective at capturing long-term direction, it may overlook volatility.
+  A trend-based model capturing broad growth direction.
 
-- **ARIMA Forecast**  
-  A more advanced time series model incorporating lag, trend, and seasonality. The ARIMA model predicts a slight production plateau, with its shaded confidence interval capturing uncertainty due to market and operational fluctuations.
+- **ARIMA (AutoRegressive Integrated Moving Average)**  
+  A time series model that accounts for lag, trend, and seasonality. It shows a mild production plateau, with confidence intervals highlighting future uncertainty.
 
-> These models are valuable for comparing different forecasting perspectives and understanding future planning scenarios.
+These forecasts help contextualize Alberta’s oil trajectory under different modeling assumptions.
 
-<br />
+---
 
-## Data Insights 
+## Data Insights
 
-> This section features an **Exponential Decline Curve** and a **Correlation Heatmap**, both designed to offer deeper insights into Alberta’s crude oil production dynamics.
+This section dives deeper into production behavior using:
 
 - **Exponential Decline Curve**  
-  A standard tool in reservoir engineering, this model visualizes the natural decline in production rates over time. It reflects diminishing output due to resource depletion or aging infrastructure, providing a realistic outlook on long-term production behavior.
+  A reservoir-engineering model showing natural production drop-off over time due to resource depletion and aging infrastructure.
 
-- **Correlation Matrix**  
-  The heatmap quantifies the strength of relationships between:
-  - **Total vs Non-Conventional**: High correlation, indicating Alberta’s heavy dependence on non-conventional sources.
-  - **Total vs Conventional**: Moderate correlation, showing a smaller but consistent influence.
-  - **Conventional vs Non-Conventional**: Weaker correlation, suggesting distinct production patterns between the two types.
+- **Correlation Heatmap**  
+  Visualizes relationships between:
+  - **Total vs Non-Conventional**: Strong correlation, indicating high reliance
+  - **Total vs Conventional**: Moderate correlation
+  - **Conventional vs Non-Conventional**: Lower correlation, showing distinct behavior patterns
 
-> Together, these tools highlight Alberta’s growing reliance on non-conventional oil and offer actionable insights for policymakers, analysts, and energy strategists seeking to support balanced and resilient production systems.
+These tools collectively reveal Alberta’s increasing dependence on non-conventional crude sources like bitumen and synthetic oil.
 
 ---
 
@@ -97,52 +103,47 @@ The red line represents the **12-month rolling mean**, offering a clearer pictur
 
 ### 📊 Project Overview
 
-This dashboard was developed to visualize and forecast Alberta’s crude oil production trends using real-time government data.
+This dashboard was developed to visualize and forecast Alberta’s **crude oil production**, including **conventional crude, bitumen, and synthetic crude**, using real-time government data.
 
-🔧 **Built With**:  
-- **Python**, Flask  
-- **HTML**, **CSS/SCSS**, **JavaScript**, **Bootstrap**  
-- **Plotly** for interactive charts  
-- Prototyped in **MATLAB**, transitioned to a full-stack web app in **Visual Studio**
+🔧 **Built With**:
+- Python, Flask
+- HTML, CSS/SCSS, JavaScript, Bootstrap
+- Plotly for interactive charts
+- SQLite for local data management
+- Prototyped in MATLAB, developed in Visual Studio
 
-📡 **Live Data Source**:  
-- Government of Alberta’s public API
-- Used Volt Flask by Creative Tim for template guidance
+📡 **Live Data Source**:
+- Government of Alberta’s public [API](https://economicdashboard.alberta.ca/dashboard/oil-production)
+- Volt Flask Dashboard template by Creative Tim
 
-🔍 **Features**:
-- Key performance indicators (KPIs)
-- Correlation analysis
-- Forecasting models (Linear Regression, ARIMA)
-- Industry-specific visuals (e.g., Exponential Decline Curve)
+🧠 **Features**:
+- KPI visualizations
+- ARIMA and linear regression forecasts
+- Decline curve modeling
+- Real-time API updates
 
-The layout prioritizes clarity, interactivity, and policy relevance—designed with modern data storytelling in mind.
+The dashboard aims to combine clarity, interactivity, and industry relevance through data storytelling.
 
 ---
 
-### 👩‍💻 About Me – Zinab Bin Sumait  
+### 👩‍💻 About Me – Zinab Bin Sumait
+
 **Aspiring Energy & Data Analyst**
 
-This dashboard is my first full-stack technical project, and it represents a meaningful step in my journey. I began coding in **January 2025** with the goal of turning energy data into actionable insights.
+This project is my first full-stack technical build. I began coding in **January 2025** with the mission of turning energy data into actionable insights.
 
-🎓 After completing an *Introduction to the Oil & Gas Industry* course at **Mount Royal University** in **December 2024**, I was inspired to explore Alberta’s energy sector from a data-driven lens.
+🎓 I completed an *Introduction to the Oil & Gas Industry* course at **Mount Royal University** in **December 2024**, and hold a **BComm in International Business Strategy** from the **University of Calgary (June 2024)**.
 
-📈 With a **Bachelor of Commerce in International Business Strategy** from the **University of Calgary (June 2024)**, I bring a foundation in strategy — now combined with analytics.
+> My work lives at the intersection of **energy, economics, and emerging tech**, and I’m passionate about supporting informed, data-driven decisions in Alberta’s resource sector.
 
-> My work lives at the intersection of **economics, energy, and technology** —  
-> and I'm committed to supporting informed, data-driven decision-making in Alberta’s resource sector.
-
-[View My Resume](#) <!-- Replace with your actual resume link -->
+[View My Resume](#) <!-- Replace this with your real resume link -->
 
 ---
-
-<br />
 
 ## Social Media
 
-- LinkedIn: [www.linkedin.com/in/zinab-b-886865201](https://www.linkedin.com/in/zinab-b-886865201)
-
-<br />
+- 🔗 [LinkedIn: linkedin.com/in/zinab-b-886865201](https://www.linkedin.com/in/zinab-b-886865201)
 
 ---
 
-Zinab Bin Sumait - All Rights Reserved.
+© 2025 Zinab Bin Sumait – All Rights Reserved.
