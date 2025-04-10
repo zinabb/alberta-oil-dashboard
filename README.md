@@ -1,6 +1,6 @@
 # Alberta Crude Oil Production
 
-![Demo](media/zinabvid.gif)
+![Demo](media/demo.gif)
 
 <br />
 
@@ -95,37 +95,42 @@ The red line represents the **12-month rolling mean**, offering a clearer pictur
 
 ## About
 
-This dashboard was developed as a data visualization and forecasting tool to analyze Alberta’s crude oil production trends.  
+### 📊 Project Overview
 
-Built using **Microsoft Visual Studio**, the project utilizes:
-- **Python** as the core language  
-- **HTML**, **CSS/SCSS**, **JavaScript**, **Bootstrap**, and **Plotly** for frontend design  
-- Early prototyping in **MATLAB**, later transitioned into a fully interactive Flask web app  
+This dashboard was developed to visualize and forecast Alberta’s crude oil production trends using real-time government data.
 
-📡 **Real-time data** is sourced from the **Government of Alberta’s public API**, ensuring the insights reflect the latest available data.  
-The dashboard includes:
-- Key KPIs
-- Correlation matrices
-- Forecasting models (Simple Linear Regression, ARIMA)
-- Domain-specific visuals like the Exponential Decline Curve
+🔧 **Built With**:  
+- **Python**, Flask  
+- **HTML**, **CSS/SCSS**, **JavaScript**, **Bootstrap**  
+- **Plotly** for interactive charts  
+- Prototyped in **MATLAB**, transitioned to a full-stack web app in **Visual Studio**
 
-The layout follows a clean, modular design with a strong emphasis on clarity, usability, and data storytelling.
+📡 **Live Data Source**:  
+- Government of Alberta’s public API
+
+🔍 **Features**:
+- Key performance indicators (KPIs)
+- Correlation analysis
+- Forecasting models (Linear Regression, ARIMA)
+- Industry-specific visuals (e.g., Exponential Decline Curve)
+
+The layout prioritizes clarity, interactivity, and policy relevance—designed with modern data storytelling in mind.
 
 ---
 
-### 👩‍💻 Zinab Bin Sumait  
-**Aspiring Energy and Data Analyst **  
+### 👩‍💻 About Me – Zinab Bin Sumait  
+**Aspiring Energy & Data Analyst**
 
-This dashboard represents both a **personal milestone** and a **professional foundation**. I started coding in **January 2025**, sparked by a desire to bring economic and energy data to life.
+This dashboard is my first full-stack technical project, and it represents a meaningful step in my journey. I began coding in **January 2025** with the goal of turning energy data into actionable insights.
 
-After completing an *Introduction to the Oil and Gas Industry* course at **Mount Royal University** in **December 2024**, I developed this project to explore Alberta’s vital role in global energy.
+🎓 After completing an *Introduction to the Oil & Gas Industry* course at **Mount Royal University** in **December 2024**, I was inspired to explore Alberta’s energy sector from a data-driven lens.
 
-🛠️ This dashboard is my **first technical project**, built entirely through self-learning and passion for energy analytics.
+📈 With a **Bachelor of Commerce in International Business Strategy** from the **University of Calgary (June 2024)**, I bring a foundation in strategy — now combined with analytics.
 
-> This work bridges strategy, data science, and energy.  
-> My goal is to grow at the intersection of **economics, energy, and technology**, and contribute meaningfully to Alberta’s evolving energy sector.
+> My work lives at the intersection of **economics, energy, and technology** —  
+> and I'm committed to supporting informed, data-driven decision-making in Alberta’s resource sector.
 
-[View My Resume](#) <!-- Replace with actual link if you'd like -->
+[View My Resume](#) <!-- Replace with your actual resume link -->
 
 ---
 
