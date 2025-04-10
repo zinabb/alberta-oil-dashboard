@@ -218,7 +218,7 @@ def graph5():
     fig5.add_trace(go.Scatter(x=x_fill, y=y_fill,
                           fill="toself", fillcolor='pink', line=dict(color='rgba(255,255,255,0)'),
                           showlegend=True, name='Confidence Interval', opacity=0.3))
-    fig5.update_layout(title="Crude Oil Production Forecast (ARIMA) into 2026",
+    fig5.update_layout(title="Oil Production Forecast (ARIMA) into 2026",
                    xaxis_title="Date",
                    yaxis_title="m³",
                    font=dict(size=14),

@@ -21,7 +21,7 @@
 
 ## Production Overview
 
-This section summarizes Alberta’s **crude oil production performance** over the past year. It highlights:
+This section summarizes Alberta’s **oil production performance** over the past year. It highlights:
 
 - **Total Production** (monthly output)
 - **Year-over-Year Change**
@@ -46,7 +46,7 @@ Users can zoom, hover, and pan through this timeline to explore how events such 
 
 ## Distribution
 
-Explore the **distribution of monthly crude oil output** using a histogram that reveals:
+Explore the **distribution of monthly oil output** using a histogram that reveals:
 
 - A multimodal distribution pattern
 - Clusters likely linked to market demand, regulations, or extraction methods
@@ -70,7 +70,7 @@ The red line represents the rolling mean, revealing long-term structural pattern
 
 ## Forecasting
 
-Two models are used to predict Alberta’s future crude oil production into 2026:
+Two models are used to predict Alberta’s future oil production into 2026:
 
 - **Simple Linear Regression**  
   A trend-based model capturing broad growth direction.
@@ -103,7 +103,7 @@ These tools collectively reveal Alberta’s increasing dependence on non-convent
 
 ### 📊 Project Overview
 
-This dashboard was developed to visualize and forecast Alberta’s **crude oil production**, including **conventional crude, bitumen, and synthetic crude**, using real-time government data.
+This dashboard was developed to visualize and forecast Alberta’s **oil production**, including **conventional and non-conventional crude, bitumen, and synthetic crude**, using real-time government data.
 
 🔧 **Built With**:
 - Python, Flask
