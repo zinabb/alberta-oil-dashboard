@@ -5,14 +5,14 @@ class Config(object):
 
     SECRET_KEY = os.getenv('SECRET_KEY', 'S#perS3crEt_007')
 
-    # SQLite database for simplicity on Render (and locally)
+    # Use SQLite as default DB for both dev and production
     SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False 
 
     # Assets
     ASSETS_ROOT = os.getenv('ASSETS_ROOT', '/static/assets')    
 
-    # Github social login toggle
+    # Github login toggle
     SOCIAL_AUTH_GITHUB = False
     GITHUB_ID = os.getenv('GITHUB_ID')
     GITHUB_SECRET = os.getenv('GITHUB_SECRET')
@@ -29,7 +29,7 @@ class ProductionConfig(Config):
     REMEMBER_COOKIE_HTTPONLY = True
     REMEMBER_COOKIE_DURATION = 3600
 
-    # ✅ Use the same SQLite URI as base config
+    # Use same SQLite DB
     SQLALCHEMY_DATABASE_URI = Config.SQLALCHEMY_DATABASE_URI
 
 
@@ -40,7 +40,6 @@ class DebugConfig(Config):
 # Load all possible configurations
 config_dict = {
     'Production': ProductionConfig,
-    'Debug'     : DebugConfig
+    'Debug': DebugConfig
 }
 
-}
