@@ -1,6 +1,6 @@
 # Alberta Crude Oil Production
 
-![Demo](media/demo.gif)
+<img src="media/demo.gif" width="700"/>
 
 <br />
 
@@ -107,6 +107,7 @@ This dashboard was developed to visualize and forecast Alberta’s crude oil pro
 
 📡 **Live Data Source**:  
 - Government of Alberta’s public API
+- Used Volt Flask by Creative Tim for template guidance
 
 🔍 **Features**:
 - Key performance indicators (KPIs)
