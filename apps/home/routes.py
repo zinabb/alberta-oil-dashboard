@@ -52,12 +52,13 @@ def get_segment(request):
 # Utility: Fetch Alberta Total Oil Data from the live API
 def fetch_oil_data():
     url = "https://api.economicdata.alberta.ca/data?table=OilProduction"
-    response = requests.get(url)
-    json_data = response.json()  # list of records
-    df = pd.DataFrame(json_data)
-    df['Date'] = pd.to_datetime(df['Date'])
+    r = requests.get(url, timeout=30)
+    r.raise_for_status()
+    df = pd.DataFrame(r.json())
+    df["Date"] = pd.to_datetime(df["Date"], errors="coerce")
+    df["Value"] = pd.to_numeric(df["Value"], errors="coerce")
+    return df[df["Type"] == "Total oil production"].dropna().sort_values("Date").reset_index(drop=True)
 
-    return df
 
 # Utility: Fetch Alberta Oil Data Type from Live API
 def fetch_oil_type_breakdown():
