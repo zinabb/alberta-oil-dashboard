@@ -51,7 +51,7 @@ def get_segment(request):
 
 # Utility: Fetch Alberta Total Oil Data from the live API
 def fetch_oil_data():
-    url = "https://api.economicdata.alberta.ca/api/data?code=b0881da3-704c-42b9-a429-c8eff0ec5c73"
+    url = "https://api.economicdata.alberta.ca/data?table=OilProduction"
     response = requests.get(url)
     json_data = response.json()  # list of records
     df = pd.DataFrame(json_data)
