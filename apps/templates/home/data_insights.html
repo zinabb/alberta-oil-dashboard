@@ -30,27 +30,56 @@
 
     <!-- Commentary Section -->
     <h5 class="card-title">Key Insights</h5>
-    <p class="card-text">
-        The visual analyses offer valuable insights into Alberta’s evolving oil production dynamics.
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Key Insights</h5>
+                <p class="card-text">
+                    The combined visual analyses provide insight into both
+                    <strong>asset-level production behavior</strong> and
+                    <strong>system-level production relationships</strong> within Alberta’s oil sector.
+                    <br><br>
 
-        <br><br>
+                    <strong>Exponential Decline Curve:</strong><br>
+                    The exponential decline curve illustrates the
+                    <strong>typical production lifecycle of an oil well</strong>, characterized by a steep initial decline
+                    followed by a progressively slower rate of decay. This pattern reflects natural reservoir depletion and
+                    declining pressure over time. While the curve is illustrative rather than calibrated to a specific asset,
+                    it highlights a fundamental industry reality, sustaining aggregate production requires continuous reinvestment
+                    through new drilling, enhanced recovery techniques, or operational optimization, as legacy wells alone cannot
+                    maintain output indefinitely.
+                    <br><br>
 
-        <b>Exponential Decline Curve:</b><br>
-        The theoretical exponential decline curve visualizes the typical production pattern of a depleting oil reservoir. The curve exhibits a sharp initial drop followed by a gradual tapering, capturing the natural reduction in production rates over time. While idealized, this model is critical in understanding long-term production forecasts, reserve estimations, and planning for field development. Its inclusion on the dashboard reinforces the temporal nature of well productivity and emphasizes the importance of ongoing exploration, enhanced recovery techniques, or diversification to sustain overall output.
+                    <strong>Correlation Matrix (All Time):</strong><br>
+                    Across the full historical dataset,
+                    <strong>Total Oil Production</strong> exhibits an almost perfect correlation with
+                    <strong>Non-Conventional Oil</strong> production, indicating that long-term changes in Alberta’s aggregate output
+                    have been driven primarily by non-conventional sources. <strong>Conventional Oil</strong> shows a moderate positive
+                    correlation with total production, suggesting a supporting but less dominant role in shaping long-run production trends.
+                    The weaker relationship between conventional and non-conventional production implies that these streams have historically
+                    followed <strong>distinct development paths</strong> rather than moving in lockstep.
+                    <br><br>
 
-        <br><br>
+                    <strong>Correlation Matrix (Last 5 Years):</strong><br>
+                    When focusing on the most recent five years, correlations strengthen across all production categories. The relationship
+                    between <strong>Conventional</strong> and <strong>Non-Conventional Oil</strong> production increases markedly, while both
+                    show strong correlations with total production. This shift suggests that short-term fluctuations in Alberta’s output are
+                    increasingly influenced by both production streams, reflecting more integrated operational dynamics in the near term compared
+                    to the longer historical period.
+                    <br><br>
 
-        <b>Correlation Matrices:</b><br>
-        Across the <b>All Time</b> dataset, there is a near-perfect positive correlation (<i>r ≈ 0.998</i>) between <b>Total Oil Production</b> and <b>Conventional Oil Production</b>, suggesting that conventional methods have historically been the primary driver of aggregate output. Meanwhile, the moderate correlation between <b>Conventional</b> and <b>Non-Conventional Oil Production</b> (<i>r ≈ 0.44</i>) implies these streams operated with limited interdependence in earlier years.
+                    <strong>Strategic Takeaway:</strong><br>
+                    Taken together, these visuals highlight the contrast between
+                    <strong>natural decline at the well level</strong> and
+                    <strong>structural dependence on non-conventional production at the provincial level</strong>. While non-conventional oil
+                    underpins Alberta’s long-term production capacity, conventional output plays a more meaningful role in short-term variability.
+                    This underscores the importance of balanced investment strategies that manage decline, volatility, and long-term supply sustainability
+                    simultaneously.
+                </p>
+            </div>
+        </div>
+    </div>
 
-        <br><br>
-
-        In contrast, filtering the data to the <b>Last 5 Years</b> reveals stronger relationships across all categories, with correlations exceeding <i>r = 0.77</i>. The correlation between <b>Conventional</b> and <b>Non-Conventional Oil Production</b> strengthens considerably (<i>r ≈ 0.78</i>), while the relationship between <b>Total Production</b> and <b>Non-Conventional Oil</b> becomes nearly perfect (<i>r ≈ 0.993</i>). These trends underscore a structural shift: non-conventional sources—particularly oil sands—are playing an increasingly central role in Alberta’s production mix. This likely reflects growing investment in non-conventional extraction methods, supported by technological advances, economic viability, and aligned policy frameworks.
-
-        <br><br>
-
-        Together, these insights suggest that Alberta's oil industry is not only becoming more integrated across extraction types but also increasingly reliant on strategic planning to manage the decline of conventional wells while scaling up non-conventional output.
-    </p>
 
 </div>
 {% endblock content %}
